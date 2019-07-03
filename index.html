@@ -9,5 +9,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   </head>
   <body>
+    <script>
+      export default function init() {
+        window.gapi.load('auth2:auth:client', () => {
+          window.gapi.auth2.init({
+            client_id: '448377008689-08nq0n7bnd560c9nojsf6fo2st259mb0.apps.googleusercontent.com',
+            apiKey: 'AIzaSyA8uX1sTNVzGo3-p9zCCsLbLC1Hcnuw54U',
+            scope: 'profile email https://www.googleapis.com/auth/drive',
+            discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
+          });
+          window.gapi.client.init({
+            client_id: '448377008689-08nq0n7bnd560c9nojsf6fo2st259mb0.apps.googleusercontent.com',
+            apiKey: 'AIzaSyA8uX1sTNVzGo3-p9zCCsLbLC1Hcnuw54U',
+            scope: 'profile email https://www.googleapis.com/auth/drive',
+            discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
+          });
+        });
+      }
+    </script>
   <script type="text/javascript" src="app.bundle.js"></script></body>
 </html>
